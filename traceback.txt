@@ -1,0 +1,28 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 210, in script
+    mother and father "С днем рождения, Сэбби!!!"
+Exception: Say has image attributes ('and', 'father'), but there's no image tag associated with the speaking character.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 210, in script
+    mother and father "С днем рождения, Сэбби!!!"
+  File "C:\PROJECT\renpy-8.0.3-sdk\renpy\ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\PROJECT\renpy-8.0.3-sdk\renpy\exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "C:\PROJECT\renpy-8.0.3-sdk\renpy\character.py", line 1206, in __call__
+    old_attr_state = self.handle_say_attributes(False, interact)
+  File "C:\PROJECT\renpy-8.0.3-sdk\renpy\character.py", line 1030, in handle_say_attributes
+    if self.resolve_say_attributes(predicting, attrs):
+  File "C:\PROJECT\renpy-8.0.3-sdk\renpy\character.py", line 956, in resolve_say_attributes
+    raise Exception("Say has image attributes %r, but there's no image tag associated with the speaking character." % (attrs,))
+Exception: Say has image attributes ('and', 'father'), but there's no image tag associated with the speaking character.
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.0.3.22090809
+Sabby Dreams 1.0
+Sat Apr 29 22:05:28 2023

@@ -1,0 +1,14 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 95: Only one say menuitem may exist per menu.
+    sabby "Странная она.":
+                         ^
+
+File "game/script.rpy", line 109: Only one say menuitem may exist per menu.
+    sabby "Что значит на том же уровне?":
+                                        ^
+
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Thu Apr 27 10:03:35 2023
