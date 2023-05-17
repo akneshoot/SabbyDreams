@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 95: Only one say menuitem may exist per menu.
-    sabby "Странная она.":
-                         ^
-
-File "game/script.rpy", line 109: Only one say menuitem may exist per menu.
-    sabby "Что значит на том же уровне?":
-                                        ^
+File "game/script.rpy", line 642: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+    sabby "оно придет за мной, я знаю! 
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Apr 27 10:03:35 2023
+Thu May 18 00:31:46 2023
