@@ -353,27 +353,47 @@ screen main_menu():
     ## Этот тег гарантирует, что любой другой экран с тем же тегом будет
     ## заменять этот.
     tag menu
+# imagemap создает группу кнопок и других элементов в меню (ползунки, переключатели и т.д.)
 
-    add gui.main_menu_background
+    imagemap:
 
-    ## Эта пустая рамка затеняет главное меню.
-    frame:
-        style "main_menu_frame"
+        # ground  указывает картинку с фоном
 
-    ## Оператор use включает отображение другого экрана в данном. Актуальное
-    ## содержание главного меню находится на экране навигации.
-    use navigation
+        ground "gui/main_menu.png"
 
-    if gui.show_name:
+        # idle  указывает картинку с кнопками
 
-        vbox:
-            style "main_menu_vbox"
+        idle "gui/menu_normal.png"
 
-            text "[config.name!t]":
-                style "main_menu_title"
+        # hover указывает картинку с подсвеченными кнопками
 
-            text "[config.version]":
-                style "main_menu_version"
+        hover "gui/menu_hover.png"
+
+
+        
+
+        # Команда hotspot показывает РенПай где на картинке находится кнопка и что она делает
+
+        # Четыре числа в скобках - кордината х, координата у, ширина, высота кнопки
+
+        # После action указывается действие, которое кнопка выполняет
+
+        # Начать игру
+
+        hotspot (263, 339, 366, 105) action Start()
+
+        # Загрузить
+
+        hotspot (191, 608, 470, 105) action ShowMenu("load")
+
+
+        # Об игре
+
+        hotspot (244, 475, 300, 105) action ShowMenu("about")
+
+        # Выход
+
+        hotspot (39, 967, 228, 105) action Quit(confirm=True)
 
 
 style main_menu_frame is empty
