@@ -15,6 +15,20 @@ define n = Character(None, kind=nvl)
 define bad_end = 0
 define happy_end = 0
 
+define audio.allmusic = "music/allmusic.ogg"
+define audio.shagimusic = "sound/Звуки шагов в подьезде.mp3"
+define audio.shagipopolumusic = "sound/Звуки шагов по полу 2.mp3"
+define audio.childrenmusic = "sound/Звук детей на площадке.mp3"
+define audio.sunmusic = "sound/Звук солнечного дня.mp3"
+define audio.roommusic = "sound/Звук комнаты.mp3"
+define audio.restaurantmusic = "music/Ретро Джаз Вечеринка — Винтажный ресторанный джаз (www.lightaudio.ru).mp3"
+define audio.obmorokmusic = "music/Звук Сэбби потеряла сознание после вскрытия альтушного.mp3"
+define audio.palatamusic = "sound/Звук в палате.mp3"
+define audio.monstermusic = "music/сцена с монстром 2.ogg"
+define audio.govormonstramusic = "sound/Звук шепота монстра.mp3"
+define audio.mainmenumusic = "music/main-menu-theme.ogg"
+define audio.skorayamusic = "sound/Звук скорой помощи.mp3"
+
 
 image room sabby = 'Back/roomsabby.jpg'
 image sabby = 'Role/Sb.png'
@@ -37,12 +51,14 @@ image street3 = 'Back/street3.png'
 
 
 label start:
+    play music allmusic volume 0.5
     # 1 frame
     scene glavnoe
     if persistent.ending1:
         "Вы уже прошли игру, если хотите перепройти, то нажмите на экран."
     text "Глава первая"
     #2 frame
+    play sound roommusic volume 0.9
     scene roomsabby
     with fade
     show happy mother:
@@ -56,6 +72,7 @@ label start:
     mother "{cps=40}Давай вставай, завтрак на столе, не забудь почистить зубы,а я побежала на работу, буду через 6 часов."
     #5 frame
     sabby "{cps=40}Да-да, встаю"
+    stop sound
     #6 frame
     hide sad sabby
     hide happy mother
@@ -63,8 +80,10 @@ label start:
     #7 frame
     scene padik
     with fade
+    play sound shagimusic volume 0.2
     show sabby
     sabby "{cps=40}Так, зубы почистила, завтрак съела, можно пойти гулять"
+    stop sound 
     #8 frame 
     show sabby:
         xalign 0.1
@@ -113,8 +132,10 @@ label start:
     show sabby:
         xalign 0.1 yalign 1.0
     sabby "{cps=40}Спасибо!"
-    #22 frame
+    play sound shagimusic volume 0.2
     hide sabby
+    text "..."
+    stop sound
     nastya "{cps=40}Аня.."
     nastya "{cps=40}До сих пор никак не могу понять, как у таких самовлюбленных родителей могла родиться Аня"
     nastya "{cps=40}И почему при таком достатке они живут в таком районе, как наш?"
@@ -122,6 +143,7 @@ label start:
     #24 frame
     scene street
     with fade
+    play sound childrenmusic volume 0.2
     text "..."
     show serious_anya:
         xalign 0.2 yalign 15.4
@@ -213,11 +235,14 @@ label poigrat:
     show sad sabby:
       xalign 0.8 yalign 3.4
     sabby "{cps=40}Хорошо, буду тебя ждать."
+    
     hide sad sabby
     hide serious_anya
     hide sad_anya
     hide anya
+
     text "..."
+    stop sound
     jump prodoljenie
 
     return
@@ -244,8 +269,11 @@ label prodoljenie:
     #40 frame
     scene living room
     with fade
+    play sound shagipopolumusic volume 0.05
+    text "..."
     show sabby:
         xalign 0.1 yalign 1.0
+    stop sound
     sabby "{cps=40}Привет, мам, пап."
     show father:
         xalign 0.99 yalign -0.1
@@ -273,6 +301,7 @@ label prodoljenie:
     with fade
     text "Глава вторая."
     #49 frame
+    play sound sunmusic volume 0.2
     scene street1
     with fade
     text "{cps=40}Представьте себе какую-нибудь точку мира, которая находится ближе всего к экватору. Лето там очень теплое, солнечное."
@@ -284,6 +313,7 @@ label prodoljenie:
     scene street3
     with fade
     text "{cps=40}А в нашем дворе сегодня особенный день не только из-за теплой погоды..."
+    stop sound
     #52 frame
     scene roomsabby
     with fade
@@ -357,9 +387,11 @@ label maybe:
     hide happy mother
     hide cake
     hide happy_father
+    play sound sunmusic volume 0.2
     scene street2
     with fade
     text "{cps=40}Все начали собираться, мама красилась, Вика подражала ей, а папа пытался подобрать подходящий галстук."
+    stop sound
     scene living room
     with fade
     show happy_father:
@@ -372,7 +404,9 @@ label maybe:
     hide happy mother
     hide sad sabby
     hide happy_father
+    stop music fadeout 2
     text "..."
+    
     jump prodoljenie2
     return
 
@@ -389,9 +423,11 @@ label yes:
     hide sabby
     hide happy mother
     hide cake
+    play sound sunmusic volume 0.2
     scene street2
     with fade
     text "{cps=40}Все начали собираться, мама красилась, Вика подражала ей, а папа пытался подобрать подходящий галстук."
+    stop sound
     scene living room
     with fade
     show happy_father:
@@ -404,7 +440,9 @@ label yes:
     hide mother
     hide sabby
     hide happy_father
+    stop music fadeout 2
     text "..."
+    
     jump prodoljenie2
     return
 
@@ -435,9 +473,11 @@ label no:
     hide sad sabby
     hide serious_mother
     hide cake
+    play sound sunmusic volume 0.2
     scene street2
     with fade
     text "{cps=40}Все начали собираться, мама красилась, Вика подражала ей, а папа пытался подобрать подходящий галстук."
+    stop sound
     scene living room
     with fade
     show happy_father:
@@ -450,15 +490,22 @@ label no:
     hide mother
     hide sabby
     hide happy_father
+    stop music fadeout 2
     text "..."
+    
+    
     jump prodoljenie2
     return
 
 
 label prodoljenie2:
     #69 frame
+    
+    
     scene restaurant 
     with fade
+    play music restaurantmusic volume 0.1
+    text "..."
     
     show happy_father:
         xalign 0.1 yalign -0.1
@@ -591,14 +638,23 @@ father "{cps=40}А то Сэбби заскучала, смотрит уже м�
 father "{cps=40}Подъем!"
 show mother:
     xalign 0.1 yalign 1.8
+stop music fadeout 5
 mother "{cps=40}Сэбби, вставай..."
 hide father
 show angry_father:
     xalign 0.99 yalign -0.1
 hide mother
+
 show serious_mother:
     xalign 0.1 yalign -2.0
 father "{cps=40}Хватит придуриваться!"
+scene restaurant1
+play music obmorokmusic volume 0.5
+show angry_father:
+    xalign 0.99 yalign -0.1
+hide mother
+show serious_mother:
+    xalign 0.1 yalign -2.0
 mother "{cps=40}Сэбби?.."
 mother "{cps=40}Сэбби!"
 hide angry_father
@@ -609,9 +665,20 @@ mother "{cps=40}Она вся трясется!"
 mother "{cps=40}У нее пена изо рта!"
 mother "{cps=40}Вызовите скорую!"
 hide sad_mother
+scene restaurant1
+with fade
 mother "{cps=40}Все будет хорошо!"
+scene restaurant1
+with fade
 mother "{cps=40}Ты слышишь?"
+scene restaurant1
+with fade
 mother "{cps=40}Только не беспокойся, сейчас приедут доктора!!!"
+stop music fadeout 4
+scene restaurant1
+with fade
+text "..."
+play music allmusic volume 0.5
 scene osnova
 with fade
 text "Конец второй главы"
@@ -620,6 +687,7 @@ with fade
 text "Глава третья"
 scene palata
 with fade
+play sound palatamusic volume 0.2
 show father:
     xalign 0.1 yalign -0.1
 show sad_mother:
@@ -646,35 +714,45 @@ hide sad_mother
 hide father
 text "{cps=40}Пока родители убивались в своем горе, никто не знал что могло происходить по ту сторону больничной палаты."
 text "{cps=40}Шли дни, Сэбби так и оставалась в коме. Помимо ее физически плохого состояния, ей было тяжело морально."
-text "{cps=40}Вы, вероятно, слышали где-то предположения и о том, что люди, выпадая из реальности, попадают в астрал и видят загробный мир, или же находятся на пути к нему?" 
+text "{cps=40}Вы, вероятно, слышали где-то предположения и о том, что люди, выпадая из реальности, попадают в астрал и видят загробный мир, или же находятся на пути к нему?"
+stop sound
+stop music fadeout 2
 scene astral
 with fade
+play music monstermusic volume 0.5
 text "{cps=40}Сэбби не понимала кто она, где находится и что вообще нужно сделать, чтобы вернуться к своей обычной жизни."
 text "{cps=40}Но тут что-то непонятное подало голос, если бы в этом страшном месте не было бы тишины, то Сэбби и не услышала ничего, но сейчас она отчетливо понимала, что с ней говорят."
 scene astral
 with fade
+play sound govormonstramusic volume 0.2
 ktoto "{cps=40}Сэбби..."
 ktoto "{cps=40}Ты меня все-таки смогла увидеть, значит я знаю как забрать тебя"
 ktoto "{cps=40}Я доберусь до тебя!"
 ktoto "{cps=40}Ты слышишь?"
 ktoto "{cps=40}Я заберу тебя с собой!"
+stop sound
 scene astral
 with fade
 text "{cps=40}После этих слов последовало тяжелое дыхание, оно отчетливо чувствовалось над ухом, хотелось просто закрыть уши и надеяться, что это скоро все закончится, но голос снова начал произносить свои трепещущие душу возгласы."
 scene astral
 with fade
+play sound govormonstramusic volume 0.2
 ktoto "{cps=40}Я доберусь до тебя!"
 ktoto "{cps=40}Ты слышишь?"
 ktoto "{cps=40}Я заберу тебя с собой!"
+stop sound
 
 #РАБОТА МАТВЕЯ!!! здесь нужно будет сделать лабиринт (типо сэбби убегает от монстра и находит выход в свой мир)
 
 
 scene astral
 with fade
+stop music fadeout 3
 text "..."
 scene palata
 with fade
+play music allmusic volume 0.5
+play sound palatamusic volume 0.2
 show sad sabby:
     xalign 0.1 yalign 2.9
 sabby "{cps=40}Где я?"
@@ -752,6 +830,7 @@ return
 label prodoljenie4:
 mother "{cps=40}Сейчас придет доктор и выпишет тебя, я пока пойду подышу на свежем воздухе, а то столько всего произошло."
 hide serious_mother
+
 text "..."
 show doctor:
   xalign 0.9 yalign -0.2
@@ -785,6 +864,7 @@ doctor "{cps=40}Да, думаю, ей нужен психолог после п
 mother "{cps=40}Ох, мы никогда к психологам не обращались, но если это действительно ей поможет..."
 mother "{cps=40}Хорошо."
 mother "{cps=40}Мы запишемся на прием к психологу."
+stop sound
 hide doctor
 hide serious_mother
 scene osnova
@@ -793,13 +873,19 @@ text "Конец третьей главы"
 scene osnova
 with fade
 text "Глава четвертая"
+
 scene roomsabby
 with fade
+stop music fadeout 1
+play sound govormonstramusic volume 2.0
+text "..."
 show very_sad_sabby:
     xalign 0.1 yalign 2.9
 sabby "{cps=40}АААААААААА"
 show angry_father:
     xalign 0.99 yalign -0.1
+stop sound fadeout 1
+play music allmusic volume 0.5
 father "{cps=40}Да что опять стряслось?!"
 father "{cps=40}Ты кричишь каждую ночь с тех пор, как вернулась из больницы!"
 sabby "{cps=40}Оно заберет меня!"
@@ -866,8 +952,10 @@ menu:
     "Его тело похоже на человеческое":
         jump menu1
     "Он черный":
+        $ bad_end += 1
         jump menu1
     "Его силуэт непонятный":
+        $ happy_end += 1
         jump menu1
 return
 
@@ -877,8 +965,10 @@ menu:
     psih "Понятно. Давай попробуем описать его."
 
     "Руки тянулись ко мне":
+        $ bad_end += 1
         jump menu2
     "Он бежал за мной":
+        $ happy_end += 1
         jump menu2
 return
 
@@ -888,8 +978,10 @@ menu:
     psih "Понятно. Давай попробуем описать его."
 
     "Голос казался таким знакомым":
+        $ happy_end += 1
         jump papa_monster
     "Глаза залиты кровью":
+        $ bad_end += 1
         jump monster
 return
 
@@ -943,10 +1035,11 @@ text "..."
 scene osnova
 with fade
 text "{cps=40}Прошел месяц. Родители Сэбби развелись, был жуткий скандал. Отец оказался в тюрьме,а мама с дочерью пытаются продолжать жить обычной жизнью, что получается у них с трудностью."
+stop music fadeout 4
 text "{cps=40}Сэбби продолжает ходить к психологу, мама вышла на двойную ставку, чтобы обеспечить семью. Но для них это был лучший вариант."
+play music mainmenumusic volume 0.5
 window hide
 scene osnova
-pause
 n '''Спасибо за прохождение нашей первой игры!
 
 Над ней работали Капустяшки:
@@ -958,6 +1051,7 @@ n '''Спасибо за прохождение нашей первой игры
 - Емельянов Матвей
 
 - Дашацыренов Лев'''
+stop music fadeout 1
 
 $ persistent.ending1 = True
 return
@@ -1036,9 +1130,12 @@ text "Конец четвертой главы."
 scene osnova
 with fade
 text "Глава пятая."
+stop music fadeout 1.5
 scene black
 with fade
+play music obmorokmusic volume 0.5
 text "..."
+play sound skorayamusic volume 0.05
 scene skoraya
 with fade
 show blood_mother:
@@ -1055,6 +1152,7 @@ scene black
 with fade
 doctor "{cps=40}Она теряет кровь!"
 doctor "{cps=40}Едь быстрее, ей срочно нужна операционная!"
+stop sound fadeout 1
 scene pole
 with fade
 sabby "{cps=40}Где я?"
@@ -1068,8 +1166,11 @@ mother "{cps=40}Ура! Я догнала тебя, теперь ты водиш
 sabby "{cps=40}Вожу?"
 sabby "{cps=40}О чем ты?"
 sabby "{cps=40}Где я?"
+hide mother
 show happy_father:
     xalign 0.3 yalign -0.1
+show mother:
+    xalign 0.1 yalign 1.8
 father "{cps=40}Ты чего?"
 father "{cps=40}Мы на даче играем в догонялки!"
 sabby "{cps=40}В догонялки?"
@@ -1087,10 +1188,14 @@ show very_sad_sabby:
     xalign 0.8 yalign 2.9
 text "..."
 hide very_sad_sabby
+stop music fadeout 1
 scene astral
 with fade
+play music monstermusic volume 0.5
+text "..."
 show sabby_vahue:
     xalign 0.8 yalign 1.3
+play sound govormonstramusic volume 0.2
 ktoto "{cps=40}Сэбби"
 ktoto "{cps=40}Вот ты и оказалась в моих руках"
 ktoto "{cps=40}Я же говорил, что доберусь до тебя"
@@ -1104,7 +1209,10 @@ show monster_nepon:
    xalign 0.1 yalign -0.5
 sabby "{cps=40}НЕТ, СПАСИТЕ!"
 
+
 if bad_end > happy_end:
+    stop sound
+    play sound govormonstramusic volume 5.0
     hide monster_nepon
     show monster: 
       xalign 0.1 yalign -0.5
@@ -1115,7 +1223,10 @@ if bad_end > happy_end:
     scene final
     with fade
     pause
+    stop sound fadeout 1
+    stop music fadeout 1
     window hide
+    play music mainmenumusic volume 0.5
     scene osnova
     with fade
     n '''Спасибо за прохождение нашей первой игры!
@@ -1129,14 +1240,19 @@ if bad_end > happy_end:
     - Емельянов Матвей
     
     - Дашацыренов Лев'''
+    stop music fadeout 1
     $ persistent.ending1 = True
     return
 
 else:
+    stop sound fadeout 1
+    stop music fadeout 1
     hide monster_nepon
     hide sabby_vahue
     scene hospital
     with fade
+    text "..."
+    play music allmusic volume 0.5
     show blood_father:
       xalign 0.1 yalign -0.1
     show blood_mother:
@@ -1163,7 +1279,9 @@ else:
     hide blood_mother
     scene black
     with fade
+    stop music fadeout 1
     text "..."
+    play music monstermusic volume 0.5
     scene astral
     with fade
     show sabby_vahue:
@@ -1172,6 +1290,7 @@ else:
        xalign 0.1 yalign -0.5
     sabby "{cps=40}Ты выдумка!"
     sabby "{cps=40}Тебя не существует!!!"
+    play sound govormonstramusic volume 0.2
     monster "{cps=40}АХАХАХХАХАХАХАХАХА"
     hide monster
     show monster_nepon:
@@ -1185,7 +1304,9 @@ else:
     show monster:
       xalign 0.1 yalign -0.5
     monster "{cps=40}Будем считать, что ты готова начать."
+
     #РАБОТА МАТВЕЯ!!! здесь нужно сделать опрос (по темам трпп и если пользователь отвечает все правильно то наступает продолжение и хорошая концовка если нет то нужно перейти к плохой концовке)
+    
     hide monster
     show monster_nepon:
         xalign 0.1 yalign -0.5
@@ -1196,11 +1317,15 @@ else:
       xalign 0.8 yalign 1.0
     sabby "{cps=40}Я просто ходила на семинары к Алексею Игоревичу и делала  практики"
     monster "{cps=40}Ну что ж, придется мне искать другую жертву....("
+    stop sound fadeout 1
+    stop music fadeout 1
     hide sabby
     hide monster_nepon
-    scene black
+    scene osnova
     with fade
+    play music allmusic volume 0.5
     text "{cps=40}Год спустя"
+    play sound sunmusic volume 0.2
     scene pole
     with fade
     show happy_father:
@@ -1212,7 +1337,10 @@ else:
     father "{cps=40}Ну что, как вам этот участок для дачи?"
     sabby "{cps=40}Он великолепен!"
     mother "{cps=40}Теперь мы можем начать жизнь с нового листа и с нового участка!"
+    stop sound fadeout 1
+    stop music fadeout 1
     window hide
+    play music mainmenumusic volume 0.5
     scene osnova
     with fade
     n '''Спасибо за прохождение нашей первой игры!
@@ -1226,6 +1354,7 @@ else:
     - Емельянов Матвей
     
     - Дашацыренов Лев'''
+    stop music fadeout 1
     $ persistent.ending1 = True
     return
 
