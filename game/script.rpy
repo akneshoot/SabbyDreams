@@ -14,6 +14,8 @@ define monster = ('Монстр')
 define n = Character(None, kind=nvl)
 define bad_end = 0
 define happy_end = 0
+define pravotvet = 0
+define nepravotvet = 0
 
 define audio.allmusic = "music/allmusic.ogg"
 define audio.shagimusic = "sound/Звуки шагов в подьезде.mp3"
@@ -1305,58 +1307,176 @@ else:
       xalign 0.1 yalign -0.5
     monster "{cps=40}Будем считать, что ты готова начать."
 
-    #РАБОТА МАТВЕЯ!!! здесь нужно сделать опрос (по темам трпп и если пользователь отвечает все правильно то наступает продолжение и хорошая концовка если нет то нужно перейти к плохой концовке)
-    
-    hide monster
-    show monster_nepon:
-        xalign 0.1 yalign -0.5
-    monster "{cps=40}Нет! Этого не может быть!"
-    monster "{cps=40}Ты же девочка, откуда ты знаешь про докер и гит?!"
-    hide sad sabby
-    show sabby:
-      xalign 0.8 yalign 1.0
-    sabby "{cps=40}Я просто ходила на семинары к Алексею Игоревичу и делала  практики"
-    monster "{cps=40}Ну что ж, придется мне искать другую жертву....("
-    stop sound fadeout 1
-    stop music fadeout 1
-    hide sabby
-    hide monster_nepon
-    scene osnova
-    with fade
-    play music allmusic volume 0.5
-    text "{cps=40}Год спустя"
-    play sound sunmusic volume 0.2
-    scene pole
-    with fade
-    show happy_father:
-      xalign 0.1 yalign -0.1
-    show mother:
-      xalign 0.3 yalign 1.8
-    show sabby:
-       xalign 0.8 yalign 1.0
-    father "{cps=40}Ну что, как вам этот участок для дачи?"
-    sabby "{cps=40}Он великолепен!"
-    mother "{cps=40}Теперь мы можем начать жизнь с нового листа и с нового участка!"
-    stop sound fadeout 1
-    stop music fadeout 1
-    window hide
-    play music mainmenumusic volume 0.5
-    scene osnova
-    with fade
-    n '''Спасибо за прохождение нашей первой игры!
-    
-    Над ней работали Капустяшки:
-    
-    - Сидельникова Анастасия
-    
-    - Капустян Ева
-    
-    - Емельянов Матвей
-    
-    - Дашацыренов Лев'''
-    stop music fadeout 1
-    $ persistent.ending1 = True
+    menu:
+        monster "Вопрос первый. Какой текстовый редактор используется по умолчанию в git?"
+
+        "emacs":
+            $ nepravotvet += 1
+            jump menu01
+        "vim":
+            $ pravotvet += 1
+            jump menu01
+        "notepad":
+            $ nepravotvet += 1
+            jump menu01
     return
+label menu01:
+    menu:
+        monster "Вопрос первый. Какой текстовый редактор используется по умолчанию в git?"
+
+        "emacs":
+            $ nepravotvet += 1
+            jump menu02
+        "vim":
+            $ pravotvet += 1
+            jump menu02
+        "notepad":
+            $ nepravotvet += 1
+            jump menu02
+    return
+label menu02:
+    menu:
+        monster "Вопрос второй. Сколько всего может быть веток в репозитории?"
+
+        "Небольше двух":
+            $ nepravotvet += 1
+            jump menu03
+        "Столько же, сколько участников в проекте":
+            $ nepravotvet += 1
+            jump menu03
+        "Сколько угодно":
+            $ pravotvet += 1
+            jump menu03
+    return
+label menu03:
+    menu:
+        monster "Вопрос третий. Что делает команда git stash?"
+
+        "Удаляет все измененные файлы":
+            $ nepravotvet += 1
+            jump menu04
+        "Сохраняет все изменения в буфер":
+            $ pravotvet += 1
+            jump menu04
+        "Отменяет все изменения":
+            $ nepravotvet += 1
+            jump menu04
+    return
+label menu04:
+    menu:
+        monster "Вопрос четвертый. Какой командой можно загрузить с гитхаба репозиторий на свой компьютер?"
+
+        "git pull":
+            $ nepravotvet += 1
+            jump menu05
+        "git push":
+            $ nepravotvet += 1
+            jump menu05
+        "git clone":
+            $ pravotvet += 1
+            jump menu05
+    return
+label menu05:
+    menu:
+        monster "Вопрос пятый. К какому типу систем контроля версий относится гит?"
+
+        "Распределенная":
+            $ pravotvet += 1
+            jump proverkaotveta
+        "Совместная":
+            $ nepravotvet += 1
+            jump proverkaotveta
+        "Локальная":
+            $ nepravotvet += 1
+            jump proverkaotveta
+    return
+    #РАБОТА МАТВЕЯ!!! здесь нужно сделать опрос (по темам трпп и если пользователь отвечает все правильно то наступает продолжение и хорошая концовка если нет то нужно перейти к плохой концовке)
+label proverkaotveta:
+    if nepravotvet > pravotvet:
+        stop sound
+        play sound govormonstramusic volume 5.0
+        hide monster_nepon
+        show monster: 
+            xalign 0.1 yalign -0.5
+        monster "{cps=40}Не переживай, никто тебя не спасет"
+        hide monster
+        hide sabby_vahue
+        window hide
+        scene final
+        with fade
+        pause
+        stop sound fadeout 1
+        stop music fadeout 1
+        window hide
+        play music mainmenumusic volume 0.5
+        scene osnova
+        with fade
+        n '''Спасибо за прохождение нашей первой игры!
+    
+        Над ней работали Капустяшки:
+    
+        - Сидельникова Анастасия
+    
+        - Капустян Ева
+    
+        - Емельянов Матвей
+    
+        - Дашацыренов Лев'''
+        stop music fadeout 1
+        $ persistent.ending1 = True
+        return
+
+    else:
+        hide monster
+        show monster_nepon:
+            xalign 0.1 yalign -0.5
+        monster "{cps=40}Нет! Этого не может быть!"
+        monster "{cps=40}Ты же девочка, откуда ты знаешь про докер и гит?!"
+        hide sad sabby
+        show sabby:
+            xalign 0.8 yalign 1.0
+        sabby "{cps=40}Я просто ходила на семинары к Алексею Игоревичу и делала  практики"
+        monster "{cps=40}Ну что ж, придется мне искать другую жертву....("
+        stop sound fadeout 1
+        stop music fadeout 1
+        hide sabby
+        hide monster_nepon
+        scene osnova
+        with fade
+        play music allmusic volume 0.5
+        text "{cps=40}Год спустя"
+        play sound sunmusic volume 0.2
+        scene pole
+        with fade
+        show happy_father:
+            xalign 0.1 yalign -0.1
+        show mother:
+            xalign 0.3 yalign 1.8
+        show sabby:
+            xalign 0.8 yalign 1.0
+        father "{cps=40}Ну что, как вам этот участок для дачи?"
+        sabby "{cps=40}Он великолепен!"
+        mother "{cps=40}Теперь мы можем начать жизнь с нового листа и с нового участка!"
+        stop sound fadeout 1
+        stop music fadeout 1
+        window hide
+        play music mainmenumusic volume 0.5
+        scene osnova
+        with fade
+        n '''Спасибо за прохождение нашей первой игры!
+    
+        Над ней работали Капустяшки:
+    
+        - Сидельникова Анастасия
+    
+        - Капустян Ева
+    
+        - Емельянов Матвей
+    
+        - Дашацыренов Лев'''
+        stop music fadeout 1
+        $ persistent.ending1 = True
+        return
 
 
 
