@@ -431,23 +431,23 @@ init python:
     def small():
 
         ## Размеры шрифтов.
-        gui.text_size = 45
-        gui.name_text_size = 54
+        gui.text_size = 40
+        gui.name_text_size = 48
         gui.notify_text_size = 38
         gui.interface_text_size = 45
-        gui.button_text_size = 45
+        gui.button_text_size = 48
         gui.label_text_size = 51
 
         ## Регулирует местоположение текстового окна.
         gui.textbox_height = 360
-        gui.name_xpos = 120
+        gui.name_xpos = 900
         gui.dialogue_xpos = 135
         gui.dialogue_width = 1650
 
         ## Изменяет размеры и интервалы различных объектов.
         gui.slider_size = 54
 
-        gui.choice_button_width = 1860
+        gui.choice_button_width = 500
         gui.choice_button_text_size = 45
 
         gui.navigation_spacing = 30
