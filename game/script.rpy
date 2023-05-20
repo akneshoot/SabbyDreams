@@ -56,8 +56,6 @@ label start:
     play music allmusic volume 0.5
     # 1 frame
     scene glavnoe
-    if persistent.ending1:
-        "Вы уже прошли игру, если хотите перепройти, то нажмите на экран."
     text "Глава первая"
     #2 frame
     play sound roommusic volume 0.9
