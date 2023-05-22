@@ -2,17 +2,149 @@
 errors listed below, and try again.
 
 
-The label turns_loop is defined twice, at File "game/script.rpy", line 1214:
-        label turns_loop:
-and File "game/script.rpy", line 1441:
-        label turns_loop:
+File "game/script.rpy", line 56: could not parse statement.
+    play music allmusic volume 0.5
+                        ^
 
+File "game/script.rpy", line 61: could not parse statement.
+    play sound roommusic volume 0.9
+                         ^
 
-The label start2 is defined twice, at File "game/script.rpy", line 1254:
-label start2:
-and File "game/script.rpy", line 1481:
-label start2:
+File "game/script.rpy", line 83: could not parse statement.
+    play sound shagimusic volume 0.2
+                          ^
 
+File "game/script.rpy", line 135: could not parse statement.
+    play sound shagimusic volume 0.2
+                          ^
 
-Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon May 22 02:51:45 2023
+File "game/script.rpy", line 146: could not parse statement.
+    play sound childrenmusic volume 0.2
+                             ^
+
+File "game/script.rpy", line 271: could not parse statement.
+    play sound shagipopolumusic volume 0.05
+                                ^
+
+File "game/script.rpy", line 303: could not parse statement.
+    play sound sunmusic volume 0.2
+                        ^
+
+File "game/script.rpy", line 389: could not parse statement.
+    play sound sunmusic volume 0.2
+                        ^
+
+File "game/script.rpy", line 425: could not parse statement.
+    play sound sunmusic volume 0.2
+                        ^
+
+File "game/script.rpy", line 475: could not parse statement.
+    play sound sunmusic volume 0.2
+                        ^
+
+File "game/script.rpy", line 506: could not parse statement.
+    play music restaurantmusic volume 0.1
+                               ^
+
+File "game/script.rpy", line 649: could not parse statement.
+    play music obmorokmusic volume 0.5
+                            ^
+
+File "game/script.rpy", line 678: could not parse statement.
+    play music allmusic volume 0.5
+                        ^
+
+File "game/script.rpy", line 687: could not parse statement.
+    play sound palatamusic volume 0.2
+                           ^
+
+File "game/script.rpy", line 719: could not parse statement.
+    play music monstermusic volume 0.5
+                            ^
+
+File "game/script.rpy", line 724: could not parse statement.
+    play sound govormonstramusic volume 0.2
+                                 ^
+
+File "game/script.rpy", line 736: could not parse statement.
+    play sound govormonstramusic volume 0.2
+                                 ^
+
+File "game/script.rpy", line 866: could not parse statement.
+    play music allmusic volume 0.5
+                        ^
+
+File "game/script.rpy", line 867: could not parse statement.
+    play sound palatamusic volume 0.2
+                           ^
+
+File "game/script.rpy", line 992: could not parse statement.
+    play sound govormonstramusic volume 2.0
+                                 ^
+
+File "game/script.rpy", line 1000: could not parse statement.
+    play music allmusic volume 0.5
+                        ^
+
+File "game/script.rpy", line 1310: could not parse statement.
+    play music mainmenumusic volume 0.5
+                             ^
+
+File "game/script.rpy", line 1565: could not parse statement.
+    play music obmorokmusic volume 0.5
+                            ^
+
+File "game/script.rpy", line 1567: could not parse statement.
+    play sound skorayamusic volume 0.05
+                            ^
+
+File "game/script.rpy", line 1623: could not parse statement.
+    play music monstermusic volume 0.5
+                            ^
+
+File "game/script.rpy", line 1627: could not parse statement.
+    play sound govormonstramusic volume 0.2
+                                 ^
+
+File "game/script.rpy", line 1644: could not parse statement.
+    play sound govormonstramusic volume 5.0
+                                 ^
+
+File "game/script.rpy", line 1658: could not parse statement.
+    play music mainmenumusic volume 0.5
+                             ^
+
+File "game/script.rpy", line 1684: could not parse statement.
+    play music allmusic volume 0.5
+                        ^
+
+File "game/script.rpy", line 1713: could not parse statement.
+    play music monstermusic volume 0.5
+                            ^
+
+File "game/script.rpy", line 1722: could not parse statement.
+    play sound govormonstramusic volume 0.2
+                                 ^
+
+File "game/script.rpy", line 1823: could not parse statement.
+    play sound govormonstramusic volume 5.0
+                                 ^
+
+File "game/script.rpy", line 1837: could not parse statement.
+    play music mainmenumusic volume 0.5
+                             ^
+
+File "game/script.rpy", line 1872: could not parse statement.
+    play music allmusic volume 0.5
+                        ^
+
+File "game/script.rpy", line 1874: could not parse statement.
+    play sound sunmusic volume 0.2
+                        ^
+
+File "game/script.rpy", line 1889: could not parse statement.
+    play music mainmenumusic volume 0.5
+                             ^
+
+Ren'Py Version: Ren'Py 7.3.5.606
+Mon May 22 15:13:44 2023
