@@ -56,7 +56,7 @@ label start:
     play music allmusic volume 0.5
     # 1 frame
     scene glavnoe
-    text "Глава первая"
+    text "Глава первая."
     #2 frame
     play sound roommusic volume 0.9
     scene roomsabby
@@ -67,11 +67,11 @@ label start:
     #3 frame
     show sad sabby:
         xalign 0.1 yalign 3.4
-    sabby "{cps=40}Да, мам, еще пять минут"
+    sabby "{cps=40}Да, мам, еще пять минут."
     #4 frame
     mother "{cps=40}Давай вставай, завтрак на столе, не забудь почистить зубы,а я побежала на работу, буду через 6 часов."
     #5 frame
-    sabby "{cps=40}Да-да, встаю"
+    sabby "{cps=40}Да-да, встаю."
     stop sound
     #6 frame
     hide sad sabby
@@ -82,21 +82,21 @@ label start:
     with fade
     play sound shagimusic volume 0.2
     show sabby
-    sabby "{cps=40}Так, зубы почистила, завтрак съела, можно пойти гулять"
+    sabby "{cps=40}Так, зубы почистила, завтрак съела, можно пойти гулять."
     stop sound 
     #8 frame 
     show sabby:
         xalign 0.1
     show nastya:
         xalign 0.8 yalign -1.0
-    nastya "{cps=40}Ой, Сэбби, привет, как ты уже подросла"
+    nastya "{cps=40}Ой, Сэбби, привет, как ты уже подросла."
     #9 frame 
-    sabby "{cps=40}Здравствуйте, Анастасия Павловна"
+    sabby "{cps=40}Здравствуйте, Анастасия Павловна."
     #10 frame
     hide nastya
     show serious_nastya:
         xalign 0.8 yalign -2.2
-    nastya "{cps=40}Да какая я тебе Анастасия Павловна, просто Настя, мне 16, а не 40"
+    nastya "{cps=40}Да какая я тебе Анастасия Павловна, просто Настя, мне 16, а не 40."
     #11 frame *update
     sabby "{cps=40}Извините, я не хотела вас обидеть."
     sabby "{cps=40}Как вы себя чувствуете, как ваши родители?"
@@ -104,7 +104,7 @@ label start:
     nastya "..."
     nastya "{cps=40}Ты неисправима."
     nastya "{cps=40}Родители нормально, папа ходит на химотерапию, вроде, легче становится, мама, выплачивая долги, потеряла себя, завела кучу проблем со здоровьем, теперь с ногами проблемы…"
-    nastya "{cps=40}Мне пришлось устроиться официанткой неподалеку, чтобы обеспечить семью"
+    nastya "{cps=40}Мне пришлось устроиться официанткой неподалеку, чтобы обеспечить семью."
     hide serious_nastya
     show sad_nastya:
       xalign 0.8 yalign -1.0
@@ -126,7 +126,7 @@ label start:
         xalign 0.8 yalign -2.2
     nastya "{cps=40}Ладно."
     nastya "{cps=40}Ты, наверное, торопишься, с Аней ведь гулять идешь?"
-    sabby "{cps=40}Ну, да"
+    sabby "{cps=40}Ну, да."
     nastya "{cps=40}Тогда беги, не буду тебя задерживать, хорошей прогулки!"
     hide sad sabby
     show sabby:
@@ -137,7 +137,7 @@ label start:
     text "..."
     stop sound
     nastya "{cps=40}Аня.."
-    nastya "{cps=40}До сих пор никак не могу понять, как у таких самовлюбленных родителей могла родиться Аня"
+    nastya "{cps=40}До сих пор никак не могу понять, как у таких самовлюбленных родителей могла родиться Аня."
     nastya "{cps=40}И почему при таком достатке они живут в таком районе, как наш?"
     hide serious_nastya
     #24 frame
@@ -221,8 +221,7 @@ label poigrat:
     show very_sad_sabby:
        xalign 0.8 yalign 2.9
     annmother "{cps=40}Ты опять с этой девчонкой?!"
-    annmother "{cps=40}Сколько раз тебе нужно повторять, чтобы ты с ней 
-    не общалась!"
+    annmother "{cps=40}Сколько раз тебе нужно повторять, чтобы ты с ней не общалась!"
     anya "{cps=40}Ой, мама все-таки нашла меня."
     anya "{cps=40}Надо бежать."
     sabby "{cps=40}Эх, ладно, пока.."
@@ -381,7 +380,7 @@ label maybe:
     show sad sabby:
         xalign 0.1 yalign 2.9
     sabby "{cps=40}Может, все-таки дома посидим?"
-    mother "{cps=40}Не переживай, солнышко, всё будет хорошо"
+    mother "{cps=40}Не переживай, солнышко, всё будет хорошо."
     hide father
     hide sad sabby
     hide happy mother
@@ -390,7 +389,7 @@ label maybe:
     play sound sunmusic volume 0.2
     scene street2
     with fade
-    text "{cps=40}Все начали собираться, мама красилась, Вика подражала ей, а папа пытался подобрать подходящий галстук."
+    text "{cps=40}Все начали собираться, мама красилась, Сэбби подражала ей, а папа пытался подобрать подходящий галстук."
     stop sound
     scene living room
     with fade
@@ -426,7 +425,7 @@ label yes:
     play sound sunmusic volume 0.2
     scene street2
     with fade
-    text "{cps=40}Все начали собираться, мама красилась, Вика подражала ей, а папа пытался подобрать подходящий галстук."
+    text "{cps=40}Все начали собираться, мама красилась, Сэбби подражала ей, а папа пытался подобрать подходящий галстук."
     stop sound
     scene living room
     with fade
@@ -476,7 +475,7 @@ label no:
     play sound sunmusic volume 0.2
     scene street2
     with fade
-    text "{cps=40}Все начали собираться, мама красилась, Вика подражала ей, а папа пытался подобрать подходящий галстук."
+    text "{cps=40}Все начали собираться, мама красилась, Сэббиа подражала ей, а папа пытался подобрать подходящий галстук."
     stop sound
     scene living room
     with fade
@@ -518,10 +517,10 @@ label prodoljenie2:
     nastya "{cps=40}Здравствуйте! "
     nastya "{cps=40}Сегодня я буду вашим официантом."
     nastya "{cps=40}Сэбби, поздравляю тебя с днем рождения! Счастья, здоровья и всего самого наилучшего!"
-    sabby "{cps=40}Здравствуйте, спасибо большое"
+    sabby "{cps=40}Здравствуйте, спасибо большое."
     mother "{cps=40}За какой столик мы можем присесть?"
     nastya "{cps=40}Специально для вас я заняла столик у окна, чтобы вы могли есть и смотреть на центральную площадь города."
-    nastya "{cps=40}Прошу, присаживайтесь, вот меню"
+    nastya "{cps=40}Прошу, присаживайтесь, вот меню."
 
     
           
@@ -567,15 +566,15 @@ label prodoljenie2:
     hide happy_father
     show father:
         xalign 0.99 yalign -0.1
-    sabby "{cps=40}Пожалуй, закажу только одно блюдо"
+    sabby "{cps=40}Пожалуй, закажу только одно блюдо."
     mother "{cps=40}Не забывай, мы празднуем твой день рождения, закажи столько, сколько съешь." 
-    mother "{cps=40}Можешь даже чуть больше, заберем домой и оставим на ужин"
+    mother "{cps=40}Можешь даже чуть больше, заберем домой и оставим на ужин."
     hide sad sabby
     show sabby:
         xalign 0.2 yalign 1.0
     sabby "{cps=40}Хорошо"
 
-    sabby "{cps=40}Тогда я буду лимонад, роллы с креветкой и один онигири с сёмгой"
+    sabby "{cps=40}Тогда я буду только кусочек тирамису."
     father "{cps=40}Мне пиво и калифорнию, а жене лимонад и филадельфию."
     jump prodoljenie3
     return
@@ -594,7 +593,7 @@ label prodoljenie2:
         xalign 0.1 yalign 2.9
     sabby "{cps=40}Хорошо"
 
-    sabby "{cps=40}Тогда я буду лимонад, роллы с креветкой и один онигири с сёмгой"
+    sabby "{cps=40}Тогда я буду лимонад и один онигири с сёмгой."
     father "{cps=40}Мне пиво и калифорнию, а жене лимонад и филадельфию."
     jump prodoljenie3
     return
@@ -606,13 +605,13 @@ label prodoljenie2:
         xalign 0.99 yalign -0.1
     sabby "{cps=40}Может, все-таки домой?"
     mother "{cps=40}Не забывай, мы празднуем твой день рождения, закажи столько, сколько съешь." 
-    mother "{cps=40}Можешь даже чуть больше, заберем домой и оставим на ужин"
+    mother "{cps=40}Можешь даже чуть больше, заберем домой и оставим на ужин."
     hide sad sabby
     show sabby:
         xalign 0.2 yalign 1.0
-    sabby "{cps=40}Хорошо"
+    sabby "{cps=40}Хорошо."
 
-    sabby "{cps=40}Тогда я буду лимонад, роллы с креветкой и один онигири с сёмгой"
+    sabby "{cps=40}Тогда я буду лимонад, роллы с креветкой и один онигири с сёмгой."
     father "{cps=40}Мне пиво и калифорнию, а жене лимонад и филадельфию."
     jump prodoljenie3
     return
@@ -626,12 +625,12 @@ hide sabby
 hide sad sabby
 show cafe_nastya:
  xalign 0.55 yalign -1.0
-nastya "{cps=40}Хорошо, ожидание заказа до 20 минут"
+nastya "{cps=40}Хорошо, ожидание заказа до 20 минут."
 hide cafe_nastya
 text "{cps=40}Семья просидела около часа в ресторане и наслаждалась как видом из окна, прекрасным звуковым сопровождением, так и замеатльно приготовленной едой, которую они не так уж и часто ели."
 show father:
     xalign 0.99 yalign -0.1
-father "{cps=40}Ну всё, поели, попили, можем ехать домой"
+father "{cps=40}Ну всё, поели, попили, можем ехать домой."
 father "{cps=40}А то Сэбби заскучала, смотрит уже минут десять в одну точку и ничего не говорит."
 father "{cps=40}Подъем!"
 show mother:
@@ -679,10 +678,10 @@ text "..."
 play music allmusic volume 0.5
 scene osnova
 with fade
-text "Конец второй главы"
+text "Конец второй главы."
 scene osnova
 with fade
-text "Глава третья"
+text "Глава третья."
 scene palata
 with fade
 play sound palatamusic volume 0.2
@@ -724,7 +723,7 @@ scene astral
 with fade
 play sound govormonstramusic volume 0.2
 ktoto "{cps=40}Сэбби..."
-ktoto "{cps=40}Ты меня все-таки смогла увидеть, значит я знаю как забрать тебя"
+ktoto "{cps=40}Ты меня все-таки смогла увидеть, значит я знаю как забрать тебя."
 ktoto "{cps=40}Я доберусь до тебя!"
 ktoto "{cps=40}Ты слышишь?"
 ktoto "{cps=40}Я заберу тебя с собой!"
@@ -739,64 +738,179 @@ ktoto "{cps=40}Я доберусь до тебя!"
 ktoto "{cps=40}Ты слышишь?"
 ktoto "{cps=40}Я заберу тебя с собой!"
 stop sound
+jump start1
 
-#РАБОТА МАТВЕЯ!!! здесь нужно будет сделать лабиринт (типо сэбби убегает от монстра и находит выход в свой мир)
+
+label simongame (difficulty=0, endgame=0,goquick=0):
+
+    $ sequence=[] #последовательность ответа.
+    $ nowpush=0#последовательности итератор
+    $ thecolor=0#кнопку Вы должны нажать.
+
+label turnsequence: #теперь вызовем рандомизатор, чтобы добавить знаки.
+    python:
+        for i in range (0,difficulty):
+            added=renpy.random.randint(0,3)
+            sequence.append(added)
+    $nowpush=0
+
+label showthesequence: #теперь показывают на экране, которые отображают последовательность
+    if nowpush==len(sequence):
+        jump theguessin#отскочить, если последовательность завершена
+    show screen voidgame
+    $ renpy.pause(0.5,hard=True)
+    show screen displaysequence
+    hide screen voidgame
+    $ renpy.pause(0.5,hard=True)
+    if nowpush< len(sequence):
+        $ nowpush+=1
+    jump showthesequence
+
+label theguessin:#этот ярлык подготовить экран, скрывая то, что осталось от предыдущих
+    $ nowpush=0
+    hide screen displaysequence
+  #Теперь вызовем на экране ввода данных
+    $ nowpush=0
+label guessthesequence: #сейчас ввод команд игрока, чтобы повторить последовательность
+    if nowpush==len(sequence):
+        jump turnsequence #если завершить, повторить сначала
+    call screen inputcolor
+    $ myguess=_return #вот нажатой кнопки
+    $ theright =sequence[nowpush]#правильный кнопку, которую нужно нажать в данный момент
+    if theright==myguess:
+        $nowpush+=1
+        if nowpush==(endgame):
+            jump winner
+        jump guessthesequence
+    if theright!=myguess:
+        jump looser
+label winner:#в messagge для определения победы
+    jump prodeljenie_scene1
+    return
+label looser: #сообщение
+    jump start1
+
+    return
 
 
-scene astral
-with fade
-stop music fadeout 3
-text "..."
-scene palata
-with fade
-play music allmusic volume 0.5
-play sound palatamusic volume 0.2
-show sad sabby:
-    xalign 0.1 yalign 2.9
-sabby "{cps=40}Где я?"
-show sad_mother:
-    xalign 0.8 yalign -2.0
-mother "{cps=40}Дорогая, наконец-то ты очнулась! "
-mother "{cps=40}Боже мой...."
-mother "{cps=40}Эти недели были невыносимыми, я каждый день приходила к тебе и молилась за тебя!"
-sabby "{cps=40}Что произошло?"
-mother "{cps=40}Врачи так и не смогли понять что это было, но во время празднования твоего дня рождения ты просто смотрела в одну точку, а потом..."
-mother "{cps=40}Как я рада, что ты очнулась!"
-hide sad sabby
-show very_sad_sabby:
-    xalign 0.1 yalign 2.9
-sabby "{cps=40}Мне снилось очень многое..."
-sabby "{cps=40}Оно говорило со мной, оно хочет забрать меня!"
-hide sad_mother
-show serious_mother:
-    xalign 0.8 yalign -2.0
-mother "{cps=40}Что за оно?.."
-sabby "{cps=40}Я не смогла его разглядеть, но оно кричало очень страшные вещи."
-sabby "{cps=40}Нет..."
-sabby "{cps=40}Оно заберет меня, мама!"
-sabby "{cps=40}Оно найдет меня и заберет с собой!"
-sabby "{cps=40}Я не хочу, мама!"
+screen displaysequence:
+    grid 2 2:
+        xalign 0.5
+        yalign 0.5
+        spacing 5
+        if sequence[nowpush]==0:
+            add "redon.png"
+        else:
+            add "buttonoff.png"
+        if sequence[nowpush]==1:
+            add "blueon.png"
+        else:
+            add "buttonoff.png"
+        if sequence[nowpush]==2:
+            add "greenon.png"
+        else:
+            add "buttonoff.png"
+        if sequence[nowpush]==3:
+            add "yellowon.png"
+        else:
+            add "buttonoff.png"
+screen voidgame:
+    grid 2 2:
+        xalign 0.5
+        yalign 0.5
+        spacing 5
+        add "buttonoff.png"
+        add "buttonoff.png"
+        add "buttonoff.png"
+        add "buttonoff.png"
 
-#menu
-menu:
-    mother "{cps=40}Не беспокойся, дорогая, никто тебя не тронет. Страшный сон закончился, теперь мы вместе, не переживай."
+screen inputcolor:
+    use racetheclock(goquick) #this is a moving bar, so techie!
+    text "Ваша очередь" xalign 0.5 yalign 0.9
+    grid 2 2:
+        xalign 0.5
+        yalign 0.5
+        spacing 5
+        imagebutton idle "buttonoff.png" hover "redon.png" action Return(0)
+        imagebutton idle "buttonoff.png" hover "blueon.png" action Return(1)
+        imagebutton idle "buttonoff.png" hover "greenon.png" action Return(2)
+        imagebutton idle "buttonoff.png" hover "yellowon.png" action Return(3)
 
-    "Но оно сказало, что заберет меня!":
-        $ happy_end += 1
-        $ renpy.notify("Ваш ответ повлиял на развитие событий")
-        jump zaberet
+
+screen racetheclock(goquick):
+    $ mytime=AnimatedValue(value=10.0, range=10.0, delay=goquick, old_value=0.0)
+    bar value mytime xalign 0.5 yalign 0.1 xsize 500
+    timer goquick action Jump("too_slow")
+
+label too_slow:
+    "Время вышло!"
+    jump start1
+    return
+
+
+
+
+# Игра начинается здесь.
+label start1:
+    "Повторите теже самые кнопки что мигают, чтобы помочь выбраться Сэбби из сна."
+    call simongame pass (difficulty=1,endgame=4,goquick=5)
+    return
+
+label prodeljenie_scene1:
+    scene astral
+    with fade
+    stop music fadeout 3
+    text "..."
+    scene palata
+    with fade
+    play music allmusic volume 0.5
+    play sound palatamusic volume 0.2
+    show sad sabby:
+        xalign 0.1 yalign 2.9
+    sabby "{cps=40}Где я?"
+    show sad_mother:
+        xalign 0.8 yalign -2.0
+    mother "{cps=40}Дорогая, наконец-то ты очнулась! "
+    mother "{cps=40}Боже мой...."
+    mother "{cps=40}Эти недели были невыносимыми, я каждый день приходила к тебе и молилась за тебя!"
+    sabby "{cps=40}Что произошло?"
+    mother "{cps=40}Врачи так и не смогли понять что это было, но во время празднования твоего дня рождения ты просто смотрела в одну точку, а потом..."
+    mother "{cps=40}Как я рада, что ты очнулась!"
+    hide sad sabby
+    show very_sad_sabby:
+        xalign 0.1 yalign 2.9
+    sabby "{cps=40}Мне снилось очень многое..."
+    sabby "{cps=40}Оно говорило со мной, оно хочет забрать меня!"
+    hide sad_mother
+    show serious_mother:
+        xalign 0.8 yalign -2.0
+    mother "{cps=40}Что за оно?.."
+    sabby "{cps=40}Я не смогла его разглядеть, но оно кричало очень страшные вещи."
+    sabby "{cps=40}Нет..."
+    sabby "{cps=40}Оно заберет меня, мама!"
+    sabby "{cps=40}Оно найдет меня и заберет с собой!"
+    sabby "{cps=40}Я не хочу, мама!"
+
+    #menu
+    menu:
+        mother "{cps=40}Не беспокойся, дорогая, никто тебя не тронет. Страшный сон закончился, теперь мы вместе, не переживай."
+
+        "Но оно сказало, что заберет меня!":
+            $ happy_end += 1
+            $ renpy.notify("Ваш ответ повлиял на развитие событий")
+            jump zaberet
+            
+        "Я хочу домой":
+            $ bad_end += 1
+            $ renpy.notify("Ваш ответ повлиял на развитие событий")
+            jump want_home
+            
+        "А где папа?":       
+            $ happy_end += 1
+            $ renpy.notify("Ваш ответ повлиял на развитие событий")
+            jump where_father
         
-    "Я хочу домой":
-        $ bad_end += 1
-        $ renpy.notify("Ваш ответ повлиял на развитие событий")
-        jump want_home
-        
-    "А где папа?":       
-        $ happy_end += 1
-        $ renpy.notify("Ваш ответ повлиял на развитие событий")
-        jump where_father
-       
-return
+    return
 
 
 label zaberet:
@@ -987,225 +1101,542 @@ return
 label papa_monster:
 $ renpy.notify("Ваши ответы повлияли на развитие событий")
 psih "{cps=40}Надо объеденить все эти характеристики и получить картинку."
+jump start2
 
 #РАБОТА МАТВЕЯ!!! здесь нужно сделать игру-змейку
+init python:
 
-psih "{cps=40}Боже..."
-psih "{cps=40}Мне так жаль, что ты видишь это каждую ночь..."
-hide sad sabby
-hide psih
-show photo_papa at center with dissolve:  
-    yalign 0.4
-text "*фото монстра, который доставал девочку в кошмарах*"
-hide photo_papa with dissolve
-show psih:
-   xalign 0.95 yalign -6.5
-show sad sabby:
-    xalign 0.1 yalign 2.9
-psih "{cps=40}Мне нужно поговорить с твоей мамой, можешь позвать ее, пожалуйста, и подождать снаружи?"
-sabby "{cps=40}Хорошо"
-hide sad sabby
-show serious_mother:
-    xalign 0.1 yalign -2.0
-mother "{cps=40}Что с ней?"
-psih "{cps=40}Я пообщалась с Вашей дочерью и мы с ней кое-что нарисовали, посмотрите, пожалуйста"
-mother "{cps=40}Это мой муж, я вижу, а что не так?"
-psih "{cps=40}Сопоставляя ее рассказы о том как проживает ваша семья, о кошмарах и их точке отсчета, а также рисунок, у меня есть неутешительные выводы и я удивлена как ВЫ могли не заметить такое.."
-psih "{cps=40}Ваш муж, отец Сэбби, насилует вашу дочь"
-hide serious_mother
-show sad_mother:
-    xalign 0.1 yalign -2.0
-mother "{cps=40}Но..."
-mother "{cps=40}Как?!"
-mother "{cps=40}Он клялся, что будет любить ее как родную, почему он так поступил?"
-psih "{cps=40}Как родную?"
-mother "{cps=40}Ее отец ушел как только узнал, что у нас будет ребенок, а этот..."
-mother "{cps=40}Этот появился в моей жизни сразу после рождения Сэбби"
-mother "{cps=40}Почему она мне не рассказывала об этом?!"
-psih "{cps=40}У Вашего ребенка нестабильная психика, которая пытается защитить Сэбби, поэтому она забывает практически все негативные моменты, но подсознание не обманешь"
-psih "{cps=40}Я обязана передать эту информацию в полицию"
-mother "{cps=40}Да я сама напишу на него такое заявление!"
-mother "{cps=40}Я засужу его!"
-mother "{cps=40}Он не должен жить!"
-hide sad_mother
-hide psih
-text "..."
-scene osnova
-with fade
-text "{cps=40}Прошел месяц. Родители Сэбби развелись, был жуткий скандал. Отец оказался в тюрьме,а мама с дочерью пытаются продолжать жить обычной жизнью, что получается у них с трудностью."
-stop music fadeout 4
-text "{cps=40}Сэбби продолжает ходить к психологу, мама вышла на двойную ставку, чтобы обеспечить семью. Но для них это был лучший вариант."
-play music mainmenumusic volume 0.5
-window hide
-scene osnova
-n '''Спасибо за прохождение нашей первой игры!
+    # НАСТРОЙКИ ИГРЫ ПО УМОЛЧАНИЮ:
 
-Над ней работали Капустяшки:
+    # набор типов карточек по умолчанию
+    all_cards = ['A', 'B', 'C']
+    # ширина и высота поля
+    ww = 3
+    hh = 3
+    # сколько карточек можно открыть за 1 ход
+    max_c = 2
+    # размер текста в карточке для текстового режима
+    card_size = 48
+    # время, выделенное на прохождение
+    max_time = 25
+    # пауза перед тем, как карточки исчезнут
+    wait = 0.5
+    # режим карточек с изображениями, а не с иекстом
+    img_mode = True
 
-- Сидельникова Анастасия
+    values_list = []
+    temp = []
+    # объявляем картинки-карточки
+    # должны быть в формате "images/card_*.png"
+    # обязательны "card_back.png" и "card_empty.png"
+    for fn in renpy.list_files():
+        if fn.startswith("images/card_") and fn.endswith((".png")):
+            name = fn[12:-4]
+            renpy.image("card " + name, fn)
+            if name != "empty" and name != "back":
+                temp.append(str(name))
+    # если картинок найдено > 1,
+    # то меняем набор типов карточек, но имена файлов
+    if len(temp) > 1:
+        all_cards = temp
+    else:
+        # иначе включаем текстовый режим,
+        # так как картинок очень мало
+        img_mode = False
 
-- Капустян Ева
+    # функция инициализации игрового поля
+    def cards_init():
+        global values_list
+        values_list = []
+        while len(values_list) + max_c <= ww * hh:
+            current_card = renpy.random.choice(all_cards)
+            for i in range(0, max_c):
+                values_list.append(current_card)
+        renpy.random.shuffle(values_list)
+        while len(values_list) < ww * hh:
+            values_list.append('empty')
 
-- Емельянов Матвей
+# экран игры
+screen memo_scr:
+    # таймер
+    timer 1.0 action If (memo_timer > 1, SetVariable("memo_timer", memo_timer - 1), Jump("memo_game_lose") ) repeat True
+    # поле
+    grid ww hh:
+        align (.5, .5) # в центре
+        for card in cards_list:
+            button:
+                left_padding 0
+                right_padding 0
+                top_padding 0
+                bottom_padding 0
+                background None
+                if card["c_value"] == 'empty':
+                    if img_mode:
+                        add "card empty"
+                    else:
+                        text " " size card_size
+                else:
+                    if card["c_chosen"]:
+                        if img_mode:
+                            add "card " + card["c_value"]
+                        else:
+                            text card["c_value"] size card_size
+                    else:
+                        if img_mode:
+                            add "card back"
+                        else:
+                            text "#" size card_size
+                # нажатие на кнопку-карточку
+                action If ( (card["c_chosen"] or not can_click), None, [SetDict(cards_list[card["c_number"]], "c_chosen", True), Return(card["c_number"]) ] )
+    text str(memo_timer) xalign .5 yalign 0.0 size card_size
 
-- Дашацыренов Лев'''
-stop music fadeout 1
+# сама игра
+label memoria_game:
+    $ cards_init()
+    $ cards_list = []
+    python:
+        for i in range (0, len(values_list) ):
+            if values_list[i] == 'empty':
+                cards_list.append ( {"c_number":i, "c_value": values_list[i], "c_chosen":True} )
+            else:
+                cards_list.append ( {"c_number":i, "c_value": values_list[i], "c_chosen":False} )
+    $ memo_timer = max_time
+    # показать экран с игрой
+    show screen memo_scr
+    # основной цикл игры
+    label memo_game_loop:
+        $ can_click = True
+        $ turned_cards_numbers = []
+        $ turned_cards_values = []
+        $ turns_left = max_c
+        label turns_loop:
+            if turns_left > 0:
+                $ result = ui.interact()
+                $ memo_timer = memo_timer
+                $ turned_cards_numbers.append (cards_list[result]["c_number"])
+                $ turned_cards_values.append (cards_list[result]["c_value"])
+                $ turns_left -= 1
+                jump turns_loop
+        # предотвращаем открытие лишних карточек
+        $ can_click = False
+        if turned_cards_values.count(turned_cards_values[0]) != len(turned_cards_values):
+            $ renpy.pause (wait, hard = True)
+            python:
+                for i in range (0, len(turned_cards_numbers) ):
+                    cards_list[turned_cards_numbers[i]]["c_chosen"] = False
+        else:
+            $ renpy.pause (wait, hard = True)
+            python:
+                for i in range (0, len(turned_cards_numbers) ):
+                    cards_list[turned_cards_numbers[i]]["c_value"] = 'empty'
+                for j in cards_list:
+                    if j["c_chosen"] == False:
+                        renpy.jump ("memo_game_loop")
+                renpy.jump ("memo_game_win")
+        jump memo_game_loop
 
-$ persistent.ending1 = True
-return
+# проигрыш
+label memo_game_lose:
+    hide screen memo_scr
+    $ renpy.pause (0.1, hard = True)
+    jump memoria_game
+
+# выигрыш
+label memo_game_win:
+    hide screen memo_scr
+    $ renpy.pause (0.1, hard = True)
+    jump prodoljenie_scene2
+    return
+
+
+label start2:
+    scene psihroom
+    $ max_time = 40
+    $ ww, hh = 4, 4
+    call memoria_game
+    return
+
+label prodoljenie_scene2:
+    scene psihroom
+    show psih:
+        xalign 0.95 yalign -6.5
+    show sad sabby:
+        xalign 0.1 yalign 2.9
+    psih "{cps=40}Боже..."
+    psih "{cps=40}Мне так жаль, что ты видишь это каждую ночь..."
+    hide sad sabby
+    hide psih
+    show photo_papa at center with dissolve:  
+        yalign 0.4
+    text "*фото монстра, который доставал девочку в кошмарах*"
+    hide photo_papa with dissolve
+    show psih:
+        xalign 0.95 yalign -6.5
+    show sad sabby:
+        xalign 0.1 yalign 2.9
+    psih "{cps=40}Мне нужно поговорить с твоей мамой, можешь позвать ее, пожалуйста, и подождать снаружи?"
+    sabby "{cps=40}Хорошо"
+    hide sad sabby
+    show serious_mother:
+        xalign 0.1 yalign -2.0
+    mother "{cps=40}Что с ней?"
+    psih "{cps=40}Я пообщалась с Вашей дочерью и мы с ней кое-что нарисовали, посмотрите, пожалуйста"
+    mother "{cps=40}Это мой муж, я вижу, а что не так?"
+    psih "{cps=40}Сопоставляя ее рассказы о том как проживает ваша семья, о кошмарах и их точке отсчета, а также рисунок, у меня есть неутешительные выводы и я удивлена как ВЫ могли не заметить такое.."
+    psih "{cps=40}Ваш муж, отец Сэбби, насилует вашу дочь"
+    hide serious_mother
+    show sad_mother:
+        xalign 0.1 yalign -2.0
+    mother "{cps=40}Но..."
+    mother "{cps=40}Как?!"
+    mother "{cps=40}Он клялся, что будет любить ее как родную, почему он так поступил?"
+    psih "{cps=40}Как родную?"
+    mother "{cps=40}Ее отец ушел как только узнал, что у нас будет ребенок, а этот..."
+    mother "{cps=40}Этот появился в моей жизни сразу после рождения Сэбби"
+    mother "{cps=40}Почему она мне не рассказывала об этом?!"
+    psih "{cps=40}У Вашего ребенка нестабильная психика, которая пытается защитить Сэбби, поэтому она забывает практически все негативные моменты, но подсознание не обманешь"
+    psih "{cps=40}Я обязана передать эту информацию в полицию"
+    mother "{cps=40}Да я сама напишу на него такое заявление!"
+    mother "{cps=40}Я засужу его!"
+    mother "{cps=40}Он не должен жить!"
+    hide sad_mother
+    hide psih
+    text "..."
+    scene osnova
+    with fade
+    text "{cps=40}Прошел месяц. Родители Сэбби развелись, был жуткий скандал. Отец оказался в тюрьме,а мама с дочерью пытаются продолжать жить обычной жизнью, что получается у них с трудностью."
+    stop music fadeout 4
+    text "{cps=40}Сэбби продолжает ходить к психологу, мама вышла на двойную ставку, чтобы обеспечить семью. Но для них это был лучший вариант."
+    play music mainmenumusic volume 0.5
+    window hide
+    scene osnova
+    n '''Спасибо за прохождение нашей первой игры!
+
+    Над ней работали Капустяшки:
+
+    - Сидельникова Анастасия
+
+    - Капустян Ева
+
+    - Емельянов Матвей
+
+    - Дашацыренов Лев'''
+    stop music fadeout 1
+
+    $ persistent.ending1 = True
+    return
 
 label monster:
 $ renpy.notify("Ваши ответы повлияли на развитие событий")
 psih "{cps=40}Надо объеденить все эти характеристики и получить картинку."
-
+jump start3
 #РАБОТА МАТВЕЯ!!! здесь нужно сделать игру-змейку
+init python:
 
-psih "{cps=40}Боже...{/cps}"
-psih "{cps=40}Мне так жаль, что ты видишь это каждую ночь..."
-hide sad sabby
-hide psih
-show photo_monster at center with dissolve:  
-    yalign 0.4
-text "*фото монстра, который доставал девочку в кошмарах*"
-hide photo_monster with dissolve
-show psih:
-   xalign 0.95 yalign -6.5
-show sad sabby:
-    xalign 0.1 yalign 2.9
-psih "{cps=40}Мне нужно поговорить с твоей мамой, можешь позвать ее, пожалуйста, и подождать снаружи?"
-sabby "{cps=40}Хорошо"
-hide sad sabby
-show serious_mother:
-    xalign 0.1 yalign -2.0
-mother "{cps=40}Что с ней?"
-psih "{cps=40}Я пообщалась с вашей дочерью и мы с ней кое-что нарисовали, посмотрите, пожалуйста"
-mother "{cps=40}Что это?"
-psih "{cps=40}Это то, что ваша дочь видит постоянно, не только во снах."
-psih "{cps=40}Есть подозрения на психическое расстройство, но я не ставлю диагнозы, вам надо обратиться ко врачу"
-mother "{cps=40}Можете подсказать нам хорошего психиатра?"
-psih "{cps=40}Да, конечно"
-psih "{cps=40}Записывайте номер телефона..."
-hide serious_mother
-hide psih
-text "..."
-scene osnova
-with fade
-text "{cps=40}Мама Сэбби осозновала на сколько все может быть серьезным, если не обратиться к хорошему специалисту, поэтому поспешно записала номер телефона и вышла из кабинета психолога. Они с Сэбби вернулись домой."
-scene livingroom
-with fade
-show serious_mother:
-    xalign 0.1 yalign -2.0
-show sad sabby:
-    xalign 0.3 yalign 2.9
-show happy_father:
-    xalign 0.9 yalign -0.1
-father "{cps=40}Вот вы и дома!"
-father "{cps=40}Я тут уже стол успел накрыть!"
-father "{cps=40}Долго же вас не было!"
-father "{cps=40}Чего такие грустные?"
-father "{cps=40}Как все прошло?"
-mother "{cps=40}Сэбби, покушай и иди спать, нам с папой надо поговорить"
-sabby "{cps=40} Хорошо, мам"
-hide sad sabby
-hide serious_mother
-hide happy_father
-text "..."
-show sad_mother:
-    xalign 0.1 yalign -2.0
-show father:
-    xalign 0.9 yalign -0.1
-mother "{cps=40}Психолог сказал, что нам необходимо обратиться к психиатру, так как есть подозрения на расстройство..."
-father "{cps=40}Расстройство?"
-father "{cps=40}Ты уже нашла специалиста?"
-mother "{cps=40}Мне посоветовали одного, но он стоит очень недешево..."
-mother "{cps=40}Я не знаю как оплачивать сеансы..."
-father "{cps=40}Я устроюсь на подработку"
-father "{cps=40}Мы потянем"
-father "{cps=40}Должны потянуть."
-scene osnova
-with fade
-text "Конец четвертой главы."
-scene osnova
-with fade
-text "Глава пятая."
-stop music fadeout 1.5
-scene black
-with fade
-play music obmorokmusic volume 0.5
-text "..."
-play sound skorayamusic volume 0.05
-scene skoraya
-with fade
-show blood_mother:
-    xalign 0.5 yalign -2.0
-show blood_father:
-    xalign 0.1 yalign -0.1
-text "..."
-hide blood_father
-hide blood_mother
-scene black
-with fade
-text "{cps=40}Что происходит..."
-scene black
-with fade
-doctor "{cps=40}Она теряет кровь!"
-doctor "{cps=40}Едь быстрее, ей срочно нужна операционная!"
-stop sound fadeout 1
-scene pole
-with fade
-sabby "{cps=40}Где я?"
-scene pole
-with fade
-show mother:
-    xalign 0.1 yalign 1.8
-show sad sabby:
-    xalign 0.8 yalign 2.9
-mother "{cps=40}Ура! Я догнала тебя, теперь ты водишь!"
-sabby "{cps=40}Вожу?"
-sabby "{cps=40}О чем ты?"
-sabby "{cps=40}Где я?"
-hide mother
-show happy_father:
-    xalign 0.3 yalign -0.1
-show mother:
-    xalign 0.1 yalign 1.8
-father "{cps=40}Ты чего?"
-father "{cps=40}Мы на даче играем в догонялки!"
-sabby "{cps=40}В догонялки?"
-sabby "{cps=40}На даче??"
-sabby "{cps=40}У нас же нет дачи!"
-mother "{cps=40}Как это нет"
-mother "{cps=40}Мы сейчас прямо на ней)"
-mother "{cps=40}Не придуривайся!"
-mother "{cps=40}Ты водишь!!!"
-hide happy_father
-hide mother
-text "..."
-hide sad sabby
-show very_sad_sabby:
-    xalign 0.8 yalign 2.9
-text "..."
-hide very_sad_sabby
-stop music fadeout 1
-scene astral
-with fade
-play music monstermusic volume 0.5
-text "..."
-show sabby_vahue:
-    xalign 0.8 yalign 1.3
-play sound govormonstramusic volume 0.2
-ktoto "{cps=40}Сэбби"
-ktoto "{cps=40}Вот ты и оказалась в моих руках"
-ktoto "{cps=40}Я же говорил, что доберусь до тебя"
-sabby "{cps=40}Ты выдумка!"
-sabby "{cps=40}Тебя не существует!!!"
-show monster:
-    xalign 0.1 yalign -0.5
-monster "{cps=40}Как это не существует, если я здесь"
-hide monster
-show monster_nepon:
-   xalign 0.1 yalign -0.5
-sabby "{cps=40}НЕТ, СПАСИТЕ!"
+    # НАСТРОЙКИ ИГРЫ ПО УМОЛЧАНИЮ:
+
+    # набор типов карточек по умолчанию
+    all_cards = ['A', 'B', 'C']
+    # ширина и высота поля
+    ww = 3
+    hh = 3
+    # сколько карточек можно открыть за 1 ход
+    max_c = 2
+    # размер текста в карточке для текстового режима
+    card_size = 48
+    # время, выделенное на прохождение
+    max_time = 25
+    # пауза перед тем, как карточки исчезнут
+    wait = 0.5
+    # режим карточек с изображениями, а не с иекстом
+    img_mode = True
+
+    values_list = []
+    temp = []
+    # объявляем картинки-карточки
+    # должны быть в формате "images/card_*.png"
+    # обязательны "card_back.png" и "card_empty.png"
+    for fn in renpy.list_files():
+        if fn.startswith("images/card_") and fn.endswith((".png")):
+            name = fn[12:-4]
+            renpy.image("card " + name, fn)
+            if name != "empty" and name != "back":
+                temp.append(str(name))
+    # если картинок найдено > 1,
+    # то меняем набор типов карточек, но имена файлов
+    if len(temp) > 1:
+        all_cards = temp
+    else:
+        # иначе включаем текстовый режим,
+        # так как картинок очень мало
+        img_mode = False
+
+    # функция инициализации игрового поля
+    def cards_init():
+        global values_list
+        values_list = []
+        while len(values_list) + max_c <= ww * hh:
+            current_card = renpy.random.choice(all_cards)
+            for i in range(0, max_c):
+                values_list.append(current_card)
+        renpy.random.shuffle(values_list)
+        while len(values_list) < ww * hh:
+            values_list.append('empty')
+
+# экран игры
+screen memo_scr:
+    # таймер
+    timer 1.0 action If (memo_timer > 1, SetVariable("memo_timer", memo_timer - 1), Jump("memo_game_lose") ) repeat True
+    # поле
+    grid ww hh:
+        align (.5, .5) # в центре
+        for card in cards_list:
+            button:
+                left_padding 0
+                right_padding 0
+                top_padding 0
+                bottom_padding 0
+                background None
+                if card["c_value"] == 'empty':
+                    if img_mode:
+                        add "card empty"
+                    else:
+                        text " " size card_size
+                else:
+                    if card["c_chosen"]:
+                        if img_mode:
+                            add "card " + card["c_value"]
+                        else:
+                            text card["c_value"] size card_size
+                    else:
+                        if img_mode:
+                            add "card back"
+                        else:
+                            text "#" size card_size
+                # нажатие на кнопку-карточку
+                action If ( (card["c_chosen"] or not can_click), None, [SetDict(cards_list[card["c_number"]], "c_chosen", True), Return(card["c_number"]) ] )
+    text str(memo_timer) xalign .5 yalign 0.0 size card_size
+
+# сама игра
+label memoria_game1:
+    $ cards_init()
+    $ cards_list = []
+    python:
+        for i in range (0, len(values_list) ):
+            if values_list[i] == 'empty':
+                cards_list.append ( {"c_number":i, "c_value": values_list[i], "c_chosen":True} )
+            else:
+                cards_list.append ( {"c_number":i, "c_value": values_list[i], "c_chosen":False} )
+    $ memo_timer = max_time
+    # показать экран с игрой
+    show screen memo_scr
+    # основной цикл игры
+    label memo_game_loop1:
+        $ can_click = True
+        $ turned_cards_numbers = []
+        $ turned_cards_values = []
+        $ turns_left = max_c
+        label turns_loop1:
+            if turns_left > 0:
+                $ result = ui.interact()
+                $ memo_timer = memo_timer
+                $ turned_cards_numbers.append (cards_list[result]["c_number"])
+                $ turned_cards_values.append (cards_list[result]["c_value"])
+                $ turns_left -= 1
+                jump turns_loop1
+        # предотвращаем открытие лишних карточек
+        $ can_click = False
+        if turned_cards_values.count(turned_cards_values[0]) != len(turned_cards_values):
+            $ renpy.pause (wait, hard = True)
+            python:
+                for i in range (0, len(turned_cards_numbers) ):
+                    cards_list[turned_cards_numbers[i]]["c_chosen"] = False
+        else:
+            $ renpy.pause (wait, hard = True)
+            python:
+                for i in range (0, len(turned_cards_numbers) ):
+                    cards_list[turned_cards_numbers[i]]["c_value"] = 'empty'
+                for j in cards_list:
+                    if j["c_chosen"] == False:
+                        renpy.jump ("memo_game_loop1")
+                renpy.jump ("memo_game_win1")
+        jump memo_game_loop1
+
+# проигрыш
+label memo_game_lose1:
+    hide screen memo_scr
+    $ renpy.pause (0.1, hard = True)
+    jump memoria_game1
+
+# выигрыш
+label memo_game_win1:
+    hide screen memo_scr
+    $ renpy.pause (0.1, hard = True)
+    jump prodoljenie_scene3
+    return
+
+
+label start3:
+    scene psihroom
+    $ max_time = 40
+    $ ww, hh = 4, 4
+    call memoria_game1
+
+    return
+
+
+label prodoljenie_scene3:
+    scene psihroom
+    show psih:
+        xalign 0.95 yalign -6.5
+    show sad sabby:
+        xalign 0.1 yalign 2.9
+    psih "{cps=40}Боже...{/cps}"
+    psih "{cps=40}Мне так жаль, что ты видишь это каждую ночь..."
+    hide sad sabby
+    hide psih
+    show photo_monster at center with dissolve:  
+        yalign 0.4
+    text "*фото монстра, который доставал девочку в кошмарах*"
+    hide photo_monster with dissolve
+    show psih:
+        xalign 0.95 yalign -6.5
+    show sad sabby:
+        xalign 0.1 yalign 2.9
+    psih "{cps=40}Мне нужно поговорить с твоей мамой, можешь позвать ее, пожалуйста, и подождать снаружи?"
+    sabby "{cps=40}Хорошо"
+    hide sad sabby
+    show serious_mother:
+        xalign 0.1 yalign -2.0
+    mother "{cps=40}Что с ней?"
+    psih "{cps=40}Я пообщалась с вашей дочерью и мы с ней кое-что нарисовали, посмотрите, пожалуйста"
+    mother "{cps=40}Что это?"
+    psih "{cps=40}Это то, что ваша дочь видит постоянно, не только во снах."
+    psih "{cps=40}Есть подозрения на психическое расстройство, но я не ставлю диагнозы, вам надо обратиться ко врачу"
+    mother "{cps=40}Можете подсказать нам хорошего психиатра?"
+    psih "{cps=40}Да, конечно"
+    psih "{cps=40}Записывайте номер телефона..."
+    hide serious_mother
+    hide psih
+    text "..."
+    scene osnova
+    with fade
+    text "{cps=40}Мама Сэбби осозновала на сколько все может быть серьезным, если не обратиться к хорошему специалисту, поэтому поспешно записала номер телефона и вышла из кабинета психолога. Они с Сэбби вернулись домой."
+    scene livingroom
+    with fade
+    show serious_mother:
+        xalign 0.1 yalign -2.0
+    show sad sabby:
+        xalign 0.3 yalign 2.9
+    show happy_father:
+        xalign 0.9 yalign -0.1
+    father "{cps=40}Вот вы и дома!"
+    father "{cps=40}Я тут уже стол успел накрыть!"
+    father "{cps=40}Долго же вас не было!"
+    father "{cps=40}Чего такие грустные?"
+    father "{cps=40}Как все прошло?"
+    mother "{cps=40}Сэбби, покушай и иди спать, нам с папой надо поговорить"
+    sabby "{cps=40} Хорошо, мам"
+    hide sad sabby
+    hide serious_mother
+    hide happy_father
+    text "..."
+    show sad_mother:
+        xalign 0.1 yalign -2.0
+    show father:
+        xalign 0.9 yalign -0.1
+    mother "{cps=40}Психолог сказал, что нам необходимо обратиться к психиатру, так как есть подозрения на расстройство..."
+    father "{cps=40}Расстройство?"
+    father "{cps=40}Ты уже нашла специалиста?"
+    mother "{cps=40}Мне посоветовали одного, но он стоит очень недешево..."
+    mother "{cps=40}Я не знаю как оплачивать сеансы..."
+    father "{cps=40}Я устроюсь на подработку"
+    father "{cps=40}Мы потянем"
+    father "{cps=40}Должны потянуть."
+    scene osnova
+    with fade
+    text "Конец четвертой главы."
+    scene osnova
+    with fade
+    text "Глава пятая."
+    stop music fadeout 1.5
+    scene black
+    with fade
+    play music obmorokmusic volume 0.5
+    text "..."
+    play sound skorayamusic volume 0.05
+    scene skoraya
+    with fade
+    show blood_mother:
+        xalign 0.5 yalign -2.0
+    show blood_father:
+        xalign 0.1 yalign -0.1
+    text "..."
+    hide blood_father
+    hide blood_mother
+    scene black
+    with fade
+    text "{cps=40}Что происходит..."
+    scene black
+    with fade
+    doctor "{cps=40}Она теряет кровь!"
+    doctor "{cps=40}Едь быстрее, ей срочно нужна операционная!"
+    stop sound fadeout 1
+    scene pole
+    with fade
+    sabby "{cps=40}Где я?"
+    scene pole
+    with fade
+    show mother:
+        xalign 0.1 yalign 1.8
+    show sad sabby:
+        xalign 0.8 yalign 2.9
+    mother "{cps=40}Ура! Я догнала тебя, теперь ты водишь!"
+    sabby "{cps=40}Вожу?"
+    sabby "{cps=40}О чем ты?"
+    sabby "{cps=40}Где я?"
+    hide mother
+    show happy_father:
+        xalign 0.3 yalign -0.1
+    show mother:
+        xalign 0.1 yalign 1.8
+    father "{cps=40}Ты чего?"
+    father "{cps=40}Мы на даче играем в догонялки!"
+    sabby "{cps=40}В догонялки?"
+    sabby "{cps=40}На даче??"
+    sabby "{cps=40}У нас же нет дачи!"
+    mother "{cps=40}Как это нет"
+    mother "{cps=40}Мы сейчас прямо на ней)"
+    mother "{cps=40}Не придуривайся!"
+    mother "{cps=40}Ты водишь!!!"
+    hide happy_father
+    hide mother
+    text "..."
+    hide sad sabby
+    show very_sad_sabby:
+        xalign 0.8 yalign 2.9
+    text "..."
+    hide very_sad_sabby
+    stop music fadeout 1
+    scene astral
+    with fade
+    play music monstermusic volume 0.5
+    text "..."
+    show sabby_vahue:
+        xalign 0.8 yalign 1.3
+    play sound govormonstramusic volume 0.2
+    ktoto "{cps=40}Сэбби"
+    ktoto "{cps=40}Вот ты и оказалась в моих руках"
+    ktoto "{cps=40}Я же говорил, что доберусь до тебя"
+    sabby "{cps=40}Ты выдумка!"
+    sabby "{cps=40}Тебя не существует!!!"
+    show monster:
+        xalign 0.1 yalign -0.5
+    monster "{cps=40}Как это не существует, если я здесь"
+    hide monster
+    show monster_nepon:
+        xalign 0.1 yalign -0.5
+    sabby "{cps=40}НЕТ, СПАСИТЕ!"
 
 
 if bad_end > happy_end:

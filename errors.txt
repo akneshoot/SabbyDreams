@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 15: invalid syntax
-    = 0
-     ^
+The label turns_loop is defined twice, at File "game/script.rpy", line 1214:
+        label turns_loop:
+and File "game/script.rpy", line 1441:
+        label turns_loop:
+
+
+The label start2 is defined twice, at File "game/script.rpy", line 1254:
+label start2:
+and File "game/script.rpy", line 1481:
+label start2:
+
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Fri May 19 01:49:55 2023
+Mon May 22 02:51:45 2023
