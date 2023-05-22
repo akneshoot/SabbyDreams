@@ -852,8 +852,8 @@ label too_slow:
 
 # Игра начинается здесь.
 label start1:
-    "Соберите воспоминания Сэбби, повторяя комбинации картинок, чтобы помочь выбраться Сэбби из сна."
-    call simongame pass (difficulty=1,endgame=4,goquick=5) from _call_simongame
+    "Повторите теже самые кнопки что мигают, чтобы помочь выбраться Сэбби из сна."
+    call simongame pass (difficulty=1,endgame=4,goquick=5)
     return
 
 label prodeljenie_scene1:
@@ -1253,7 +1253,7 @@ label start2:
     scene psihroom
     $ max_time = 40
     $ ww, hh = 4, 4
-    call memoria_game from _call_memoria_game
+    call memoria_game
     return
 
 label prodoljenie_scene2:
@@ -1480,7 +1480,7 @@ label start3:
     scene psihroom
     $ max_time = 40
     $ ww, hh = 4, 4
-    call memoria_game1 from _call_memoria_game1
+    call memoria_game1
 
     return
 
